@@ -15,9 +15,9 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity implements SensorEventListener {
     // device sensor manager
     private SensorManager SensorManage;
-    // define the compass picture that will be use
+    //  the compass image that will be use
     private ImageView compassimage;
-    // record the angle turned of the compass picture
+    //  the angle turned for the compass picture
     private float DegreeStart = 0f;
     TextView DegreeTV;
     @Override
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         compassimage = (ImageView) findViewById(R.id.compass);
         // TextView that will display the degree
         DegreeTV = (TextView) findViewById(R.id.directions);
-        // initialize your android device sensor capabilities
+        // initializing  android device sensor capabilities
         SensorManage = (SensorManager) getSystemService(SENSOR_SERVICE);
     }
     @Override
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
                 -degree,
                 Animation.RELATIVE_TO_SELF, 0.5f,
                 Animation.RELATIVE_TO_SELF, 0.5f);
-        // set the compass animation after the end of the reservation status
+        // setting the compass animation after the end of the reservation status
         ra.setFillAfter(true);
         // set how long the animation for the compass image will take place
         ra.setDuration(210);
